@@ -1,7 +1,7 @@
 /*
 Assignment : Math...
-1. Create a templated class that supports 2D Vector addition and subtraction.
-2. Add support for 3D vectors.
+1. Create a templated class that supports 2D Vector addition and subtraction. //Done
+2. Add support for 3D vectors. //Done
 3. Add support for magnitude of a vector.
 4. Add support for normalizing a vector.
 5. Add support for dot and cross product. (you have not learned this yet)
@@ -15,13 +15,13 @@ template<typename T>
 class Vec2 //template class for 2D vectors
 {
 public:
-	int x, y; //variables
+	T x, y; //variables
 
 	Vec2() //Default constructor
 	{
 		x, y = 0;
 	}
-	Vec2(int a, int b) //Custom constructor
+	Vec2(T a, T b) //Custom constructor
 	{
 		x = a;
 		y = b;
@@ -29,26 +29,26 @@ public:
 
 	Vec2 operator+(const Vec2 &other) //overload operator for addition
 	{
-		int newX = x + other.x;
-		int newY = y + other.y;
+		T newX = x + other.x;
+		T newY = y + other.y;
 		return Vec2(newX, newY);
 	}
 	Vec2 operator+=(const Vec2 &other) //overload operator for addition (equal to)
 	{
-		int newX = x + other.x;
-		int newY = y + other.y;
+		T newX = x + other.x;
+		T newY = y + other.y;
 		return Vec2(newX, newY);
 	}
 	Vec2 operator-(const Vec2 &other) //overload operator for subtraction
 	{
-		int newX = x - other.x;
-		int newY = y - other.y;
+		T newX = x - other.x;
+		T newY = y - other.y;
 		return Vec2(newX, newY);
 	}
 	Vec2 operator-=(const Vec2 &other) //overload operator for subtraction (equal to)
 	{
-		int newX = x - other.x;
-		int newY = y - other.y;
+		T newX = x - other.x;
+		T newY = y - other.y;
 		return Vec2(newX, newY);
 	}
 
@@ -62,13 +62,13 @@ template<typename T>
 class Vec3 //template class for 3D vectors
 {
 public:
-	int x, y, z; //variables
+	T x, y, z; //variables
 
 	Vec3() //Default constructor
 	{
 		x, y, z = 0;
 	}
-	Vec3(int a, int b, int c) //Custom constructor
+	Vec3(T a, T b, T c) //Custom constructor
 	{
 		x = a;
 		y = b;
@@ -77,30 +77,30 @@ public:
 
 	Vec3 operator+(const Vec3 &other) //overload operator for addition
 	{
-		int newX = x + other.x;
-		int newY = y + other.y;
-		int newZ = z + other.z;
+		T newX = x + other.x;
+		T newY = y + other.y;
+		T newZ = z + other.z;
 		return Vec3(newX, newY, newZ);
 	}
 	Vec3 operator+=(const Vec3 &other) //overload operator for addition (equal to)
 	{
-		int newX = x + other.x;
-		int newY = y + other.y;
-		int newZ = z + other.z;
+		T newX = x + other.x;
+		T newY = y + other.y;
+		T newZ = z + other.z;
 		return Vec3(newX, newY, newZ);
 	}
 	Vec3 operator-(const Vec3 &other) //overload operator for subtraction
 	{
-		int newX = x - other.x;
-		int newY = y - other.y;
-		int newZ = z - other.z;
+		T newX = x - other.x;
+		T newY = y - other.y;
+		T newZ = z - other.z;
 		return Vec3(newX, newY, newZ);
 	}
 	Vec3 operator-=(const Vec3 &other) //overload operator for subtraction (equal to)
 	{
-		int newX = x - other.x;
-		int newY = y - other.y;
-		int newZ = z - other.z;
+		T newX = x - other.x;
+		T newY = y - other.y;
+		T newZ = z - other.z;
 		return Vec3(newX, newY, newZ);
 	}
 
