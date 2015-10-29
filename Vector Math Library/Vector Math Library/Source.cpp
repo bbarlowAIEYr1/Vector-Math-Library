@@ -2,12 +2,12 @@
 Assignment : Math...
 1. Create a templated class that supports 2D Vector addition and subtraction. //Done
 2. Add support for 3D vectors.                                                //Done
-3. Add support for magnitude of a vector.                                     //Currently working on//
-4. Add support for normalizing a vector.                                      //work on after magnitude//
-5. Add support for dot and cross product. (you have not learned this yet)     //work on after normalizing vector//
+3. Add support for magnitude of a vector.                                     //Done
+4. Add support for normalizing a vector.                                      //Done
+5. Add support for dot and cross product.                                     //work on after normalizing vector//
 */
 
-#include "Header.h"
+#include "Header.h"   //include header file
 using namespace std;  //using namespace
 
 void main()
@@ -27,15 +27,21 @@ void main()
 	C = A - B; //C will equal ((A.x - B.x)(A.y - B.y))
 	C.print2(); //print C sub value
 	cout << endl; //new line
-			
-	Vec2 <double> AA, CC; //Vec2 objects of data type double
-	cout << "2D vector AA:" << endl; //info
-	AA.x = 3, AA.y = 0; //AA = (3,0)
-	AA.print2(); //print test
-	cout << endl; //new line
 	cout << "2D vector magnitude:" << endl; //info
-	CC = AA * AA; //CC will equal ((AA.x * AA.x)(AA.y * AA.y))
-	CC.print2(); //print CC multiplication value (not the magnitude)
+	cout << "Magnitude of A is: " << A.mag2() << endl; //info and prints out magnitude of vector A
+	cout << "Magnitude of B is: " << B.mag2() << endl; //info and prints out magnitude of vector B
+	cout << endl; //new line
+	cout << "2D vector normalise:" << endl; //info
+	cout << "Normalise vector A is: " << A.nor2X() << " " << A.nor2Y() << endl; //info and prints out normalise x and y of vector A
+	cout << "Normalise vector B is: " << B.nor2X() << " " << B.nor2Y() << endl; //info and prints out normalise x and y of vector B
+	cout << endl; //new line
+	cout << "2D vector dot product:" << endl; //info
+	C = A * B; //C will equal ((A.x * B.x)(A.y * B.y)) 
+	C.dot2(); //This will print out the dot product of C
+	cout << endl; //new line
+	cout << "2D vector cross product:" << endl; //info
+												//
+												//
 	cout << endl; //new line
 
 	Vec3 <float> D, E, F; //Vec3 objects of data type float
@@ -53,15 +59,21 @@ void main()
 	F = D - E; //F will equal ((D.x - E.x)(D.y - E.y)(D.z - E.z))
 	F.print3(); //print F sub value
 	cout << endl; //new line
-			
-	Vec3 <double> DD, FF; //Vec3 objects of data type double
-	cout << "3D vector DD:" << endl; //info
-	DD.x = 5, DD.y = 0, DD.z = 0; //DD = (5,0,0)
-	DD.print3(); //print test
-	cout << endl; //new line
 	cout << "3D vector magnitude:" << endl; //info
-	FF = DD * DD; //FF will equal ((DD.x * DD.x)(DD.y * DD.y)(DD.z * DD.z))
-	FF.print3(); //print FF multiplication value (not the magnitude)
+	cout << "Magnitude of D is: " << D.mag3() << endl; //info and prints out magnitude of vector D
+	cout << "Magnitude of E is: " << E.mag3() << endl; //info and prints out magnitude of vector E
+	cout << endl; //new line
+	cout << "3D vector normalise:" << endl; //info
+	cout << "Normalise vector D is: " << D.nor3X() << " " << D.nor3Y() << " " << D.nor3Z() << endl; //info and prints out normalise x, y and z of vector D
+	cout << "Normalise vector E is: " << E.nor3X() << " " << E.nor3Y() << " " << E.nor3Z() << endl; //info and prints out normalise x, y and z of vector E
+	cout << endl; //new line
+	cout << "3D vector dot product:" << endl; //info
+	F = D * E; //F will equal ((D.x * E.x)(D.y * E.y)(D.z * E.z)) 
+	F.dot3(); //This will print out the dot product of F
+	cout << endl; //new line
+	cout << "3D vector cross product:" << endl; //info
+												//
+												//
 	cout << endl; //new line
 
 	system("pause");
