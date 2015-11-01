@@ -4,7 +4,7 @@ Assignment : Math...
 2. Add support for 3D vectors.                                                //Done
 3. Add support for magnitude of a vector.                                     //Done
 4. Add support for normalizing a vector.                                      //Done
-5. Add support for dot and cross product.                                     //work on after normalizing vector//
+5. Add support for dot and cross product.                                     //Done
 */
 
 #pragma once
@@ -74,6 +74,12 @@ public:
 		float d2 = x + y;
 		cout << d2 << endl;
 		return d2;
+	}
+
+	float cro2()
+	{
+		float c2 = (x * y) - (y * x);
+		return c2;
 	}
 
 	void print2() //prints out x and y for 2D vectors
@@ -154,6 +160,22 @@ public:
 		float d3 = x + y + z;
 		cout << d3 << endl;
 		return d3;
+	}
+
+	float cro3X()
+	{
+		float cX = (y * z) - (z * y);
+		return cX;
+	}
+	float cro3Y()
+	{
+		float cY = (z * x) - (x * z);
+		return cY;
+	}
+	float cro3Z()
+	{
+		float cZ = (x * y) - (y * x);
+		return cZ;
 	}
 
 	void print3() //prints out x, y and z for 3D vectors

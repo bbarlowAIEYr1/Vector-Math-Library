@@ -4,7 +4,7 @@ Assignment : Math...
 2. Add support for 3D vectors.                                                //Done
 3. Add support for magnitude of a vector.                                     //Done
 4. Add support for normalizing a vector.                                      //Done
-5. Add support for dot and cross product.                                     //work on after normalizing vector//
+5. Add support for dot and cross product.                                     //Done
 */
 
 #include "Header.h"   //include header file
@@ -39,10 +39,10 @@ void main()
 	C = A * B; //C will equal ((A.x * B.x)(A.y * B.y)) 
 	C.dot2(); //This will print out the dot product of C
 	cout << endl; //new line
-	cout << "2D vector cross product:" << endl; //info
-												//
-												//
-	cout << endl; //new line
+	cout << "2D vector cross product:" << endl;
+	cout << A.cro2() << endl;
+	cout << B.cro2() << endl;
+	cout << endl;
 
 	Vec3 <float> D, E, F; //Vec3 objects of data type float
 	cout << "3D vector D and E:" << endl; //info
@@ -71,10 +71,10 @@ void main()
 	F = D * E; //F will equal ((D.x * E.x)(D.y * E.y)(D.z * E.z)) 
 	F.dot3(); //This will print out the dot product of F
 	cout << endl; //new line
-	cout << "3D vector cross product:" << endl; //info
-												//
-												//
-	cout << endl; //new line
+	cout << "3D vector cross product:" << endl;
+	cout << D.cro3X() << " " << D.cro3Y() << " " << D.cro3Z() << endl;
+	cout << E.cro3X() << " " << E.cro3Y() << " " << E.cro3Z() << endl;
+	cout << endl;
 
 	system("pause");
 }
