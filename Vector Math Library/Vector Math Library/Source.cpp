@@ -7,7 +7,7 @@ Assignment : Math...
 5. Add support for dot and cross product.                                     //Done
 */
 
-#include "Header.h"   //include header file
+#include "CustomVML.h"   //include header file
 using namespace std;  //using namespace
 
 void main()
