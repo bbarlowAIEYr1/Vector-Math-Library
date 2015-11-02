@@ -21,6 +21,7 @@ public:
 	{
 		x, y = 0;
 	}
+
 	Vec2(T a, T b) //Custom constructor
 	{
 		x = a;
@@ -33,12 +34,14 @@ public:
 		T newY = y + other.y;
 		return Vec2(newX, newY);
 	}
+
 	Vec2 operator-(const Vec2 &other) //overload operator for subtraction
 	{
 		T newX = x - other.x;
 		T newY = y - other.y;
 		return Vec2(newX, newY);
 	}
+
 	Vec2 operator*(const Vec2 &other) //overload operator for multiplication
 	{
 		T newX = x * other.x;
@@ -61,6 +64,7 @@ public:
 		double nX = x / sqrtf(x * x + y * y);
 		return nX;
 	}
+
 	double nor2Y()
 	{
 		double nY = y / sqrtf(x * x + y * y);
@@ -74,12 +78,6 @@ public:
 		double d2 = x + y;
 		cout << d2 << endl;
 		return d2;
-	}
-
-	double cro2()
-	{
-		double c2 = (x * y) - (y * x);
-		return c2;
 	}
 
 	void print2() //prints out x and y for 2D vectors
@@ -98,6 +96,7 @@ public:
 	{
 		x, y, z = 0;
 	}
+
 	Vec3(T a, T b, T c) //Custom constructor
 	{
 		x = a;
@@ -112,6 +111,7 @@ public:
 		T newZ = z + other.z;
 		return Vec3(newX, newY, newZ);
 	}
+
 	Vec3 operator-(const Vec3 &other) //overload operator for subtraction
 	{
 		T newX = x - other.x;
@@ -119,6 +119,7 @@ public:
 		T newZ = z - other.z;
 		return Vec3(newX, newY, newZ);
 	}
+
 	Vec3 operator*(const Vec3 &other) //overload operator for multiplication
 	{
 		T newX = x * other.x;
@@ -126,15 +127,14 @@ public:
 		T newZ = z * other.z;
 		return Vec3(newX, newY, newZ);
 	}
-	//Vec3 operator/(const Vec3 &other)
-	//{
-	//	T cro3X, cro3Y, cro3Z, cro3;
-	//	cro3X = (y * other.z) - (z * other.y);
-	//	cro3Y = (z * other.x) - (x * other.z);
-	//	cro3Z = (x * other.y) - (y * other.x);
-	//	cro3 = cro3X, cro3Y, cro3Z;
-	//	return Vec3(cro3);
-	//}
+
+	Vec3 operator/(const Vec3 &other) //overload operator for division (does 3D vector cross product)
+	{
+		T newX = (y * other.z) - (z * other.y);
+		T newY = (z * other.x) - (x * other.z);
+		T newZ = (x * other.y) - (y * other.x);
+		return Vec3(newX, newY, newZ);
+	}
 
 	//float mag3 function. This function will compute the magnitude of 3D 
 	//vectors
@@ -151,11 +151,13 @@ public:
 		double nX = x / sqrtf(x * x + y * y + z * z);
 		return nX;
 	}
+
 	double nor3Y()
 	{
 		double nY = y / sqrtf(x * x + y * y + z * z);
 		return nY;
 	}
+
 	double nor3Z()
 	{
 		double nZ = z / sqrtf(x * x + y * y + z * z);
@@ -169,22 +171,6 @@ public:
 		double d3 = x + y + z;
 		cout << d3 << endl;
 		return d3;
-	}
-
-	double cro3X()
-	{
-		double cX = (y * z) - (z * y);
-		return cX;
-	}
-	double cro3Y()
-	{
-		double cY = (z * x) - (x * z);
-		return cY;
-	}
-	double cro3Z()
-	{
-		double cZ = (x * y) - (y * x);
-		return cZ;
 	}
 
 	void print3() //prints out x, y and z for 3D vectors
