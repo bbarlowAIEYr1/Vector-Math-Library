@@ -12,7 +12,7 @@ using namespace std;  //using namespace
 
 void main()
 {
-	Vec2 <float> A, B, C; //Vec2 objects of data type float
+	Vec2 <double> A, B, C; //Vec2 objects of data type float
 	cout << "2D vector A and B:" << endl; //info
 	A.x = 5, A.y = 4; //A = (5,4)
 	B.x = -2, B.y = 5; //B = (-2,5)
@@ -44,7 +44,7 @@ void main()
 	cout << B.cro2() << endl;
 	cout << endl;
 
-	Vec3 <float> D, E, F; //Vec3 objects of data type float
+	Vec3 <double> D, E, F; //Vec3 objects of data type float
 	cout << "3D vector D and E:" << endl; //info
 	D.x = -7, D.y = 9, D.z = 2; //D = (-7,9,2)
 	E.x = 3, E.y = 14, E.z = -3; //E = (3,14,-3)
@@ -72,6 +72,8 @@ void main()
 	F.dot3(); //This will print out the dot product of F
 	cout << endl; //new line
 	cout << "3D vector cross product:" << endl;
+	//F = D / E;
+	//F.print3();
 	cout << D.cro3X() << " " << D.cro3Y() << " " << D.cro3Z() << endl;
 	cout << E.cro3X() << " " << E.cro3Y() << " " << E.cro3Z() << endl;
 	cout << endl;

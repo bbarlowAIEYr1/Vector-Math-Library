@@ -48,7 +48,7 @@ public:
 
 	//float mag2 function. This function will compute the magnitude of 2D 
 	//vectors
-	float mag2()
+	double mag2()
 	{
 		return sqrtf(x * x + y * y);
 	}
@@ -56,29 +56,29 @@ public:
 	//float nor2X, nor2Y, and nor2Z function(s). These functions will compute
 	//the normalise of 2D vectors. The reason for 2 normalise functions, did
 	//not work when put together
-	float nor2X()
+	double nor2X()
 	{
-		float nX = x / sqrtf(x * x + y * y);
+		double nX = x / sqrtf(x * x + y * y);
 		return nX;
 	}
-	float nor2Y()
+	double nor2Y()
 	{
-		float nY = y / sqrtf(x * x + y * y);
+		double nY = y / sqrtf(x * x + y * y);
 		return nY;
 	}
 
 	//float dot2 function. This function will compute the dot product of 2D
 	//vectors.
-	float dot2()
+	double dot2()
 	{
-		float d2 = x + y;
+		double d2 = x + y;
 		cout << d2 << endl;
 		return d2;
 	}
 
-	float cro2()
+	double cro2()
 	{
-		float c2 = (x * y) - (y * x);
+		double c2 = (x * y) - (y * x);
 		return c2;
 	}
 
@@ -126,10 +126,19 @@ public:
 		T newZ = z * other.z;
 		return Vec3(newX, newY, newZ);
 	}
+	//Vec3 operator/(const Vec3 &other)
+	//{
+	//	T cro3X, cro3Y, cro3Z, cro3;
+	//	cro3X = (y * other.z) - (z * other.y);
+	//	cro3Y = (z * other.x) - (x * other.z);
+	//	cro3Z = (x * other.y) - (y * other.x);
+	//	cro3 = cro3X, cro3Y, cro3Z;
+	//	return Vec3(cro3);
+	//}
 
 	//float mag3 function. This function will compute the magnitude of 3D 
 	//vectors
-	float mag3()
+	double mag3()
 	{
 		return sqrtf(x * x + y * y + z * z);
 	}
@@ -137,44 +146,44 @@ public:
 	//float nor3X, nor3Y, and nor3Z function(s). These functions will compute
 	//the normalise of 3D vectors. The reason for 3 normalise functions, did
 	//not work when put together
-	float nor3X()
+	double nor3X()
 	{
-		float nX = x / sqrtf(x * x + y * y + z * z);
+		double nX = x / sqrtf(x * x + y * y + z * z);
 		return nX;
 	}
-	float nor3Y()
+	double nor3Y()
 	{
-		float nY = y / sqrtf(x * x + y * y + z * z);
+		double nY = y / sqrtf(x * x + y * y + z * z);
 		return nY;
 	}
-	float nor3Z()
+	double nor3Z()
 	{
-		float nZ = z / sqrtf(x * x + y * y + z * z);
+		double nZ = z / sqrtf(x * x + y * y + z * z);
 		return nZ;
 	}
 
 	//float dot3 function. This function will compute the dot product of 3D
 	//vectors.
-	float dot3()
+	double dot3()
 	{
-		float d3 = x + y + z;
+		double d3 = x + y + z;
 		cout << d3 << endl;
 		return d3;
 	}
 
-	float cro3X()
+	double cro3X()
 	{
-		float cX = (y * z) - (z * y);
+		double cX = (y * z) - (z * y);
 		return cX;
 	}
-	float cro3Y()
+	double cro3Y()
 	{
-		float cY = (z * x) - (x * z);
+		double cY = (z * x) - (x * z);
 		return cY;
 	}
-	float cro3Z()
+	double cro3Z()
 	{
-		float cZ = (x * y) - (y * x);
+		double cZ = (x * y) - (y * x);
 		return cZ;
 	}
 

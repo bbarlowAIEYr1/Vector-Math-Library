@@ -1,13 +1,36 @@
-﻿Build started 11/2/2015 3:15:13 PM.
+﻿Build started 11/2/2015 4:31:38 PM.
      1>Project "C:\Users\brock.barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\Vector Math Library\Vector Math Library.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\Vector Math Library.pdb" /Gd /TP /errorReport:prompt Source.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Source.cpp
          Source.cpp
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\Lib.exe /OUT:"C:\Users\brock.barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\x64\Debug\Vector Math Library.lib" /NOLOGO /MACHINE:X64 x64\Debug\Source.obj
-         Vector Math Library.vcxproj -> C:\Users\brock.barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\x64\Debug\Vector Math Library.lib
+     1>c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(161): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(160): note: while compiling class template member function 'double Vec3<double>::nor3Z(void)'
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(67): note: see reference to function template instantiation 'double Vec3<double>::nor3Z(void)' being compiled
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(47): note: see reference to class template instantiation 'Vec3<double>' being compiled
+     1>c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(156): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(155): note: while compiling class template member function 'double Vec3<double>::nor3Y(void)'
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(67): note: see reference to function template instantiation 'double Vec3<double>::nor3Y(void)' being compiled
+     1>c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(151): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(150): note: while compiling class template member function 'double Vec3<double>::nor3X(void)'
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(67): note: see reference to function template instantiation 'double Vec3<double>::nor3X(void)' being compiled
+     1>c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(143): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(142): note: while compiling class template member function 'double Vec3<double>::mag3(void)'
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(63): note: see reference to function template instantiation 'double Vec3<double>::mag3(void)' being compiled
+     1>c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(66): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(65): note: while compiling class template member function 'double Vec2<double>::nor2Y(void)'
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(35): note: see reference to function template instantiation 'double Vec2<double>::nor2Y(void)' being compiled
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(15): note: see reference to class template instantiation 'Vec2<double>' being compiled
+     1>c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(61): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(60): note: while compiling class template member function 'double Vec2<double>::nor2X(void)'
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(35): note: see reference to function template instantiation 'double Vec2<double>::nor2X(void)' being compiled
+     1>c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(52): note: while compiling class template member function 'double Vec2<double>::mag2(void)'
+         c:\users\brock.barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(31): note: see reference to function template instantiation 'double Vec2<double>::mag2(void)' being compiled
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\brock.barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\x64\Debug\Vector Math Library.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\brock.barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\x64\Debug\Vector Math Library.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\brock.barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\x64\Debug\Vector Math Library.lib" /MACHINE:X64 x64\Debug\Source.obj
+         Vector Math Library.vcxproj -> C:\Users\brock.barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\x64\Debug\Vector Math Library.exe
      1>Done Building Project "C:\Users\brock.barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\Vector Math Library\Vector Math Library.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.44
+Time Elapsed 00:00:01.02
