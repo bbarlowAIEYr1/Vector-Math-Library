@@ -10,6 +10,7 @@ Assignment : Math...
 #pragma once
 #include <iostream>   //c++ standard library
 #include <cmath>      //c++ library that allows the use of "sqrt" and "pow" math
+using namespace std;
 
 template<typename T>
 class Vec2 //template class for 2D vectors
