@@ -12,7 +12,7 @@ using namespace std;  //using namespace
 
 void main()
 {
-	Vec2 <double> A, B, C; //Vec2 objects of data type float
+	Vec2 <double> A, B, C; //Vec2 objects of data type double
 
 	cout << "2D vector A and B:" << endl; //info
 	A.x = 5, A.y = 4; //A = (5,4)
@@ -46,7 +46,7 @@ void main()
 	C.dot2(); //This will print out the dot product of C
 	cout << endl; //new line
 
-	Vec3 <double> D, E, F; //Vec3 objects of data type float
+	Vec3 <double> D, E, F; //Vec3 objects of data type double
 
 	cout << "3D vector D and E:" << endl; //info
 	D.x = -7, D.y = 9, D.z = 2; //D = (-7,9,2)
