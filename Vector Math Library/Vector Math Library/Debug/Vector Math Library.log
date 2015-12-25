@@ -1,0 +1,8 @@
+﻿  Source.cpp
+c:\users\brock barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(80): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  c:\users\brock barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(79): note: while compiling class template member function 'double Vector<double>::Magnitude(void)'
+  c:\users\brock barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(37): note: see reference to function template instantiation 'double Vector<double>::Magnitude(void)' being compiled
+  c:\users\brock barlow\documents\github\vector-math-library\vector math library\vector math library\source.cpp(14): note: see reference to class template instantiation 'Vector<double>' being compiled
+c:\users\brock barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(81): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+c:\users\brock barlow\documents\github\vector-math-library\vector math library\vector math library\customvml.h(82): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Vector Math Library.vcxproj -> C:\Users\Brock Barlow\Documents\GitHub\Vector-Math-Library\Vector Math Library\Debug\Vector Math Library.exe

@@ -1,181 +1,177 @@
-/*
-Assignment : Math...
-1. Create a templated class that supports 2D Vector addition and subtraction. //Done
-2. Add support for 3D vectors.                                                //Done
-3. Add support for magnitude of a vector.                                     //Done
-4. Add support for normalizing a vector.                                      //Done
-5. Add support for dot and cross product.                                     //Done
-*/
-
 #pragma once
-#include <iostream>   //c++ standard library
-#include <cmath>      //c++ library that allows the use of "sqrt" and "pow" math
+#include <iostream>  
+#include <cmath>      
+#include <string>
 using namespace std;
 
-template<typename T>
-class Vec2 //template class for 2D vectors
+template<typename T> //templated vector class
+class Vector
 {
 public:
-	T x, y; //variables
+	T x = 0;
+	T y = 0;  //variables
+	T z = 0;
+	T alpha = 0;
 
-	Vec2() //Default constructor
+	void Print3D() //used to print 3D vecs
 	{
-		x, y = 0;
+		cout << x << " " << y << " " << z << endl;
 	}
 
-	Vec2(T a, T b) //Custom constructor
+	void Print2D() //used to print 2D vecs
 	{
-		x = a;
+		cout << x << " " << y << endl;
+	}
+
+	void Print4D() //used to print 4D vecs
+	{
+		cout << x << " " << y << " " << z << " " << alpha << endl;
+	}
+
+	Vector()
+	{
+		x = 0;
+		y = 0; //default constructor
+		z = 0;
+		alpha = 0;
+	}
+
+	Vector(T a, T b)
+	{
+		x = a;  //2D constructor
 		y = b;
 	}
 
-	Vec2 operator+(const Vec2 &other) //overload operator for addition
+	Vector(T a, T b, T c)
 	{
-		T newX = x + other.x;
-		T newY = y + other.y;
-		return Vec2(newX, newY);
-	}
-
-	Vec2 operator-(const Vec2 &other) //overload operator for subtraction
-	{
-		T newX = x - other.x;
-		T newY = y - other.y;
-		return Vec2(newX, newY);
-	}
-
-	Vec2 operator*(const Vec2 &other) //overload operator for multiplication
-	{
-		T newX = x * other.x;
-		T newY = y * other.y;
-		return Vec2(newX, newY);
-	}
-
-	//float mag2 function. This function will compute the magnitude of 2D 
-	//vectors
-	double mag2()
-	{
-		return sqrtf(x * x + y * y);
-	}
-
-	//float nor2X, nor2Y, and nor2Z function(s). These functions will compute
-	//the normalise of 2D vectors. The reason for 2 normalise functions, did
-	//not work when put together
-	double nor2X()
-	{
-		double nX = x / sqrtf(x * x + y * y);
-		return nX;
-	}
-
-	double nor2Y()
-	{
-		double nY = y / sqrtf(x * x + y * y);
-		return nY;
-	}
-
-	//float dot2 function. This function will compute the dot product of 2D
-	//vectors.
-	double dot2()
-	{
-		double d2 = x + y;
-		cout << d2 << endl;
-		return d2;
-	}
-
-	void print2() //prints out x and y for 2D vectors
-	{
-		cout << x << ", " << y << endl;
-	}
-};
-
-template<typename T>
-class Vec3 //template class for 3D vectors
-{
-public:
-	T x, y, z; //variables
-
-	Vec3() //Default constructor
-	{
-		x, y, z = 0;
-	}
-
-	Vec3(T a, T b, T c) //Custom constructor
-	{
-		x = a;
+		x = a; //3D constructor
 		y = b;
 		z = c;
 	}
 
-	Vec3 operator+(const Vec3 &other) //overload operator for addition
+	Vector(T a, T b, T c, T d)
 	{
-		T newX = x + other.x;
-		T newY = y + other.y;
-		T newZ = z + other.z;
-		return Vec3(newX, newY, newZ);
+		x = a;
+		y = b; //4D constructor
+		z = c;
+		alpha = d;
 	}
 
-	Vec3 operator-(const Vec3 &other) //overload operator for subtraction
+	Vector operator+(Vector other) //addition
 	{
-		T newX = x - other.x;
-		T newY = y - other.y;
-		T newZ = z - other.z;
-		return Vec3(newX, newY, newZ);
+		Vector temp(0, 0);
+		temp.x = x + other.x;
+		temp.y = y + other.y;
+		temp.z = z + other.z;
+		return temp;
 	}
 
-	Vec3 operator*(const Vec3 &other) //overload operator for multiplication
+	Vector operator-(Vector other) //subtraction
 	{
-		T newX = x * other.x;
-		T newY = y * other.y;
-		T newZ = z * other.z;
-		return Vec3(newX, newY, newZ);
+		Vector temp(0, 0);
+		temp.x = x - other.x;
+		temp.y = y - other.y;
+		temp.z = z - other.z;
+		return temp;
 	}
 
-	Vec3 operator/(const Vec3 &other) //overload operator for division (does 3D vector cross product)
+	double Magnitude() //finds magnitude of vecs
 	{
-		T newX = (y * other.z) - (z * other.y);
-		T newY = (z * other.x) - (x * other.z);
-		T newZ = (x * other.y) - (y * other.x);
-		return Vec3(newX, newY, newZ);
+		int tempx = x * x;
+		int tempy = y * y;
+		int tempz = z * z;
+		double sr = sqrt(tempx + tempy + tempz);
+
+		return sr;
 	}
 
-	//float mag3 function. This function will compute the magnitude of 3D 
-	//vectors
-	double mag3()
+	Vector Normalize() //normalizes vecs
 	{
-		return sqrtf(x * x + y * y + z * z);
+		double div;
+		if (x >= y && x >= z)
+		{
+			div = x;
+		}
+
+		else if (y >= x && y >= z)
+		{
+			div = y;
+		}
+
+		else
+		{
+			div = z;
+		}
+		double newx = x / div;
+		double newy = y / div;
+		double newz = z / div;
+
+		Vector temp(newx, newy, newz);
+		return temp;
 	}
 
-	//float nor3X, nor3Y, and nor3Z function(s). These functions will compute
-	//the normalise of 3D vectors. The reason for 3 normalise functions, did
-	//not work when put together
-	double nor3X()
+	double operator*(Vector other) //Dot Product
 	{
-		double nX = x / sqrtf(x * x + y * y + z * z);
-		return nX;
+		Vector temp(0, 0);
+		temp.x = x * other.x;
+		temp.y = y * other.y;
+		temp.z = z * other.z;
+		double dot = temp.x + temp.y + temp.z;
+
+		return dot;
 	}
 
-	double nor3Y()
+	Vector operator/(Vector other)//Cross Product
 	{
-		double nY = y / sqrtf(x * x + y * y + z * z);
-		return nY;
+		double crossx, crossy, crossz;
+		crossx = (y * other.z) - (other.y * z);
+		crossy = (z * other.x) - (other.z * x);
+		crossz = (x * other.y) - (other.x * y);
+
+		Vector cross(crossx, crossy, crossz);
+		return cross;
 	}
 
-	double nor3Z()
+	double Angle(Vector b)//Angle between two vectors.
 	{
-		double nZ = z / sqrtf(x * x + y * y + z * z);
-		return nZ;
+		double base, opp, hyp;
+		opp = this->Magnitude();
+		base = b.Magnitude();
+		hyp = sqrt((base * base) + (opp * opp));
+
+		Vector tri(base, opp, hyp);
+		tri = tri.Nomalize();
+
+		double angle = acos(base / hyp);
+
+		angle = (angle / 3.14) * 180;
+
+		return angle;
 	}
 
-	//float dot3 function. This function will compute the dot product of 3D
-	//vectors.
-	double dot3()
+	double LinearInterpolation(float a, float b, float perc)//LinearInterpolation
 	{
-		double d3 = x + y + z;
-		cout << d3 << endl;
-		return d3;
+		return (a + (b - a)) * perc;
 	}
 
-	void print3() //prints out x, y and z for 3D vectors
+	float DtoR(int d)//Degrees to Radians
 	{
-		cout << x << ", " << y << ", " << z << endl;
+		return (d / 180)*3.14;
+	}
+
+	float RtoD(int r)//Radians to degrees
+	{
+		return (r / 3.14) * 180;
+	}
+
+	Vector<int> HexColor(unsigned int HexColor) //hex color conversion
+	{
+		unsigned int Hexred = HexColor >> 24;
+		unsigned int Hexgreen = (HexColor >> 16) & 0x00FF;
+		unsigned int Hexblue = (HexColor >> 8) & 0x0000FF;
+		unsigned int Hexalpha = HexColor & 0x000000FF;
+		Vector<int> hex(Hexred, Hexgreen, Hexblue, Hexalpha);
+
+		return hex;
 	}
 };
